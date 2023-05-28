@@ -8,4 +8,23 @@ export const getTodosGroupedByColumn = async() => {
 
     const todos = data.documents;
     
+    const columns = todos.reduce((acc, todo) => {
+        if (!acc.get(todo.status)) {
+            acc.set(todo.status, {
+                id: todo.status,
+                todos: []
+            })
+        }
+
+        acc.get(todo.status)!.todos.push({
+            $id: todo.$id,
+            $createdAt: todo.$createdAt,
+            title: todo.title,
+            status: todo.status,
+            ...(todo.image && { image: JSON.parse(todo.image)})
+        });
+
+        return acc;
+
+    }, new Map<TypedColumn, Column>)
 }
