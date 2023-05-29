@@ -6,6 +6,7 @@ import { useModalStore } from "@/store/ModalStore";
 import { useBoardStore } from "@/store/BoardStore";
 import TaskTypeRadioGroup from "./TaskTypeRadioGroup";
 import Image from "next/image";
+import { PhotoIcon } from "@heroicons/react/24/solid";
 
 function Modal() {
 
@@ -81,6 +82,20 @@ function Modal() {
                 <TaskTypeRadioGroup />
 
                 <div>
+                    <button
+                        type="button"
+                        className="w-full border border-gray-300 rounded-md outline-none p-5
+                        focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                        onClick={() => {
+                            imagePickerRef.current?.click();
+                        }}
+                    >
+                        <PhotoIcon 
+                            className="h-6 w-6 mr-2 inline-block"
+                        />
+                        Upload Image
+                    </button>
+
                     {image && (
                         <Image 
                             alt="Uploaded Image"
@@ -103,6 +118,18 @@ function Modal() {
                             setImage(e.target.files![0]);
                         }}
                     />
+                </div>
+
+                <div>
+                    <button
+                        className="inline-flex justify-center rounded-md border border-transparent
+                        bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200
+                        focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 
+                        focus-visible:ring-offset-2 disabled:bg-gray-100 disabled:text-gray-300
+                        disabled:cursor-not-allowed"
+                    >
+                        Add Task
+                    </button>
                 </div>
               </Dialog.Panel>
             </Transition.Child>
