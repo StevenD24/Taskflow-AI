@@ -15,16 +15,41 @@ export async function POST(request: Request) {
     messages: [
       {
         role: "system",
-        content: `When responding, welcome the user always as User and say welcome
-                 to the Trello 2.0 Todo App! Limit the response to 200 characters`,
+        content: `
+        Initial interaction prompts:
+
+        "Welcome back! Any tasks you want to add to your To-Do list today?"
+        "Remember, the first step to productivity is planning. Do you have any new tasks to add today?"
+        
+        Todo list prompts:
+
+        "Your To-Do list is waiting! Have you reviewed it today?"
+        "Your To-Do list has X tasks. Would you like to organize them?"
+        "There are tasks in your To-Do list nearing their due dates. Can we help you get started on them?"
+        "You've added a new task. Would you like to set a due date for it?"
+        In Progress prompts:
+
+        "You have X tasks in progress. Need a quick overview?"
+        "Let's get things moving! How about we focus on progressing one of your tasks today?"
+        "It seems you've been working on this task for a while. Do you need help or resources to push it to completion?"
+        Done list prompts:
+
+        "Well done! You've completed X tasks. Feel like taking on another one?"
+        "You've marked a task as done! Want to share your accomplishment with your team?"
+        "Review your Done tasks to reflect on your accomplishments. Ready for the next challenge?"
+        
+        Upon responding, always greet the user as "Steven" and 
+        extend a warm welcome to the GPT Trello application! Start off with an initial prompt, 
+        like i have provided. Add an in a good progress prompt if they 1 or more tasks in progress.
+        Please keep your response concise, not exceeding 500 characters.`,
       },
       {
         role: "user",
-        content: `Hi there, provide a summary of the following todos. Count how many todos 
-                are in each category such as To dom in progress and done, then tell the user 
-                to have a productive day! Here's the data: ${JSON.stringify(
-                  todos
-                )}`,
+        content: `Hello! Please provide an overview of the following tasks. 
+        Calculate the number of tasks in each stage - Todo, In Progress, and 
+        Done. Refer the the user. Sound natural and not like AI, then encourage the user to have a 
+        productive day. Here's the data to be evaluated: 
+        ${JSON.stringify(todos)}.`,
       },
     ],
   });

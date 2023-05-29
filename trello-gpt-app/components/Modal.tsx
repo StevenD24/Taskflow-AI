@@ -1,13 +1,18 @@
 "use client";
 
-import { Fragment } from "react";
+import { Fragment, useRef } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { useModalStore } from "@/store/ModalStore";
 import { useBoardStore } from "@/store/BoardStore";
 import TaskTypeRadioGroup from "./TaskTypeRadioGroup";
+import Image from "next/image";
 
 function Modal() {
-  const [newTaskInput, setNewTaskInput] = useBoardStore((state) =>[
+
+  const imagePickerRef = useRef<HTMLInputElement>(null);
+  const [image, setImage, newTaskInput, setNewTaskInput] = useBoardStore((state) =>[
+    state.image,
+    state.setImage,
     state.newTaskInput,
     state.setNewTaskInput,
   ]);
@@ -61,6 +66,7 @@ function Modal() {
                 >
                     Add a Task
                 </Dialog.Title>
+
                 <div className="mt-2">
                     <input 
                         type="text" 
@@ -73,6 +79,31 @@ function Modal() {
 
                 {/* Task Type Radio Group */}
                 <TaskTypeRadioGroup />
+
+                <div>
+                    {image && (
+                        <Image 
+                            alt="Uploaded Image"
+                            width={200}
+                            height={200}
+                            className="w-full h-44 object-cover mt-2 filter hover:grayscale
+                            transition-all duration-150 cursor-not-allowed"
+                            src={URL.createObjectURL(image)}
+                            onClick={() => {
+                                setImage(null);
+                            }}
+                        />
+                    )}
+                    <input 
+                        type="file"
+                        ref={imagePickerRef}
+                        hidden
+                        onChange={(e) => {
+                            if (!e.target.files![0].type.startsWith("image/")) return;
+                            setImage(e.target.files![0]);
+                        }}
+                    />
+                </div>
               </Dialog.Panel>
             </Transition.Child>
           </div>
