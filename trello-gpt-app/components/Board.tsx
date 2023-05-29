@@ -2,7 +2,8 @@
 
 import { useBoardStore } from '@/store/BoardStore';
 import { useEffect } from 'react';
-import { DragDropContext, Droppable, DropResult } from 'react-beautiful-dnd';
+import { DragDropContext, Droppable, DropResult } from '@hello-pangea/dnd';
+import Column from './Column';
 
 function Board() {
 
