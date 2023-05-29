@@ -25,7 +25,7 @@ function Header() {
       setLoading(false);
     };
 
-    fetchSuggestionFunc();
+    // fetchSuggestionFunc();
   }, [board]);
 
   return (
