@@ -29,6 +29,6 @@ Trello 2.0 GPT-4 is deployed on Vercel, a state-of-the-art platform known for it
    
 To provide a truly immersive and interactive experience with the application, I have taken the initiative to deploy the application on Vercel. This strategic deployment ensures that you can engage with the app in a live environment, enabling you to explore its extensive range of features firsthand.
    
-Experience the Trello 2.0 GPT-4 app in action here!   
+Experience the app live here!  
 [Trello GPT Application](https://trello-gpt-app-stevend24.vercel.app/)
 
