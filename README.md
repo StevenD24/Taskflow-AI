@@ -14,7 +14,7 @@ Trello 2.0 GPT-4 takes task management to a whole new level by integrating the a
 
 
 
-## Technologies Utilized
+## Technology Stack
 - **React:** The application is built using React, a popular JavaScript library for building interactive user interfaces. React's component-based architecture enables modular and reusable code, making development efficient and maintainable.
 - **Next.js:** A powerful React framework, is utilized for server-side rendering and static site generation. It provides excellent performance, SEO optimization, and developer-friendly features such as automatic code splitting and route pre-fetching.
 - **Zustand:** A flexible state management library, is employed to manage the application's state. With Zustand, state updates are simple and efficient, providing a smooth and responsive user experience.
