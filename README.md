@@ -12,7 +12,7 @@ Trello 2.0 GPT-4 takes task management to a whole new level by integrating the a
 - **Drag-and-Drop Simplicity:** Effortlessly organize your tasks with the intuitive drag-and-drop interface, allowing you to rearrange, prioritize, and update tasks with ease.
 - **Beautiful and Intuitive User Interface:** Immerse yourself in a visually appealing and user-friendly interface designed to enhance your task management experience.
 
-
+![Screenshot 2023-05-29 at 9 47 24 PM](https://github.com/StevenD24/Trello-2.0-GPT-4/assets/105379503/35ad8f4b-465f-4854-9e40-b607a9012fa0)
 
 ## Technology Stack
 - **React:** The application is built using React, a popular JavaScript library for building interactive user interfaces. React's component-based architecture enables modular and reusable code, making development efficient and maintainable.
