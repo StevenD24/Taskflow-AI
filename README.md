@@ -6,11 +6,11 @@ Welcome to Trello 2.0 GPT-4, a revolutionary task management application that co
 Trello 2.0 GPT-4 takes task management to a whole new level by integrating the advanced capabilities of the GPT-4 language model. Seamlessly plan, organize, and track your tasks in a visually intuitive and intelligent environment. The power of natural language processing and machine learning makes your task management experience more efficient, insightful, and delightful.
 
 ## Exciting Features
-- Intelligent Task Summarization: Let GPT-4 automatically generate concise summaries for your tasks, saving you time and effort.
-- Smart Suggestions and Productivity Insights: Receive intelligent recommendations and insights to optimize your workflow and boost your productivity.
-- Enhanced Search Functionality: Find the right tasks quickly using powerful search capabilities, including keyword search and advanced filters.
-- Drag-and-Drop Simplicity: Effortlessly organize your tasks with the intuitive drag-and-drop interface, allowing you to rearrange, prioritize, and update tasks with ease.
-- Beautiful and Intuitive User Interface: Immerse yourself in a visually appealing and user-friendly interface designed to enhance your task management experience.
+- **Intelligent Task Summarization:** Let GPT-4 automatically generate concise summaries for your tasks, saving you time and effort.
+- **Smart Suggestions and Productivity Insights:** Receive intelligent recommendations and insights to optimize your workflow and boost your productivity.
+- **Enhanced Search Functionality:** Find the right tasks quickly using powerful search capabilities, including keyword search and advanced filters.
+- **Drag-and-Drop Simplicity:** Effortlessly organize your tasks with the intuitive drag-and-drop interface, allowing you to rearrange, prioritize, and update tasks with ease.
+- **Beautiful and Intuitive User Interface:** Immerse yourself in a visually appealing and user-friendly interface designed to enhance your task management experience.
 
 
 
