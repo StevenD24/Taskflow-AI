@@ -1,6 +1,7 @@
 "use-client"
 
 import getUrl from "@/lib/getUrl";
+import { useBoardStore } from "@/store/BoardStore";
 import { DraggableProvidedDraggableProps, DraggableProvidedDragHandleProps } from "@hello-pangea/dnd";
 import { XCircleIcon } from '@heroicons/react/24/solid';
 import Image from "next/image";
@@ -23,6 +24,7 @@ function TodoCard({
     draggableProps,
     dragHandleProps,
 }: Props) {
+    const deleteTask = useBoardStore((state) => state.deleteTask);
     const [imageUrl, setImageUrl] = useState<string | null>(null);
 
     useEffect(() => {
@@ -47,7 +49,7 @@ function TodoCard({
     >
         <div className="flex justify-between items-center p-5">
             <p>{todo.title}</p>
-            <button className="text-red-500 hover:text-red-600">
+            <button onClick={() => deleteTask(index, todo, id)} className="text-red-500 hover:text-red-600">
                 <XCircleIcon 
                     className="ml-5 h-8 w-8"
                 />
@@ -55,7 +57,7 @@ function TodoCard({
         </div>
         {/* Add image here */}
         {imageUrl && (
-            <div className="relative h-full w-full rounded-b-md">
+            <div className="h-full w-full rounded-b-md">
                 <Image 
                     src={imageUrl}
                     alt="Task image"
