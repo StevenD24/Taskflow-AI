@@ -37,8 +37,21 @@ export async function POST(request: Request) {
         "Well done! You've completed X tasks. Feel like taking on another one?"
         "You've marked a task as done! Want to share your accomplishment with your team?"
         "Review your Done tasks to reflect on your accomplishments. Ready for the next challenge?"
+
+        Names List:
+        1. Visionary
+        2. Champion
+        3. Explorer
+        4. Innovator
+        5. Achiever
+        6. Strategist
+        7. Problem Solver
+        8. Pioneer
+        9. Go-getter
+        10. Ace
+        11. Leader
         
-        Upon responding, always greet the user as "Steven" and 
+        Upon responding, always greet the user randomly with one of the names in the "Names List" and 
         extend a warm welcome to the GPT Trello application! Start off with an initial prompt, 
         like i have provided. Add an in a good progress prompt if they 1 or more tasks in progress.
         Please keep your response concise, not exceeding 500 characters.`,
