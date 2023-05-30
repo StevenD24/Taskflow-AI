@@ -7,11 +7,13 @@ import { useBoardStore } from "@/store/BoardStore";
 import TaskTypeRadioGroup from "./TaskTypeRadioGroup";
 import Image from "next/image";
 import { PhotoIcon } from "@heroicons/react/24/solid";
+import { FormEvent } from "react";
 
 function Modal() {
 
   const imagePickerRef = useRef<HTMLInputElement>(null);
-  const [image, setImage, newTaskInput, setNewTaskInput] = useBoardStore((state) =>[
+  const [addTask, image, setImage, newTaskInput, setNewTaskInput] = useBoardStore((state) =>[
+    state.addTask,
     state.image,
     state.setImage,
     state.newTaskInput,
@@ -23,10 +25,20 @@ function Modal() {
     state.closeModal,
   ]);
 
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!newTaskInput) return;
+
+    // add task to board
+
+    setImage(null);
+    closeModal();
+  }
+
   return (
     // Use the `Transition` component at the root level
     <Transition appear show={isOpen} as={Fragment}>
-      <Dialog as="form" className="relative z-10" onClose={closeModal}>
+      <Dialog as="form" onSubmit={handleSubmit} className="relative z-10" onClose={closeModal}>
         {/*
           Use one Transition.Child to apply one transition to the backdrop...
         */}
@@ -81,7 +93,7 @@ function Modal() {
                 {/* Task Type Radio Group */}
                 <TaskTypeRadioGroup />
 
-                <div>
+                <div className="mt-2">
                     <button
                         type="button"
                         className="w-full border border-gray-300 rounded-md outline-none p-5
@@ -120,8 +132,10 @@ function Modal() {
                     />
                 </div>
 
-                <div>
+                <div className="mt-4">
                     <button
+                        type="submit"
+                        disabled={!newTaskInput}
                         className="inline-flex justify-center rounded-md border border-transparent
                         bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200
                         focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 

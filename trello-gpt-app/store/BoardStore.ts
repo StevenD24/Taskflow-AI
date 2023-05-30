@@ -1,5 +1,6 @@
-import { databases } from '@/appwrite';
+import { databases, ID } from '@/appwrite';
 import { getTodosGroupedByColumn } from '@/lib/getTodosGroupedByColumn';
+import uploadImage from '@/lib/uploadImage';
 import { create } from 'zustand';
 
 interface BoardState {
@@ -16,6 +17,8 @@ interface BoardState {
   searchString: string;
   setSearchString: (searchString: string) => void;
   setImage: (image: File | null) => void;
+
+  addTask: (todo: string, columnId: TypedColumn, image?: File | null) => void;
 }
 
 export const useBoardStore = create<BoardState>((set) => ({
@@ -50,4 +53,59 @@ export const useBoardStore = create<BoardState>((set) => ({
       }
     );
   },
+
+  addTask: async (todo: string, columnId: TypedColumn, image?: File | null) => {
+    let file: Image | undefined;
+  
+    if (image) {
+      const fileUploaded = await uploadImage(image);
+      if (fileUploaded) {
+        file = {
+          bucketId: fileUploaded.bucketId,
+          fileId: fileUploaded.$id,
+        };
+      }
+    }
+  
+    // creating a document in the DB
+    const { $id } = await databases.createDocument(
+      process.env.NEXT_PUBLIC_DATABASE_ID!,
+      process.env.NEXT_PUBLIC_TODOS_COLLECTION_ID!,
+      ID.unique(),
+      {
+        title: todo,
+        status: columnId,
+        ...(file && { image: JSON.stringify(file) }),
+      }
+    );
+  
+    set({ newTaskInput: "" });
+  
+    set((state) => {
+      const newColumns = new Map(state.board.columns);
+  
+      const newTodo: Todo = {
+        $id,
+        $createdAt: new Date().toISOString(),
+        title: todo,
+        status: columnId,
+      };
+  
+      newColumns.set(columnId, {
+        id: columnId,
+        todos: [
+          {
+            ...newTodo,
+            image: file ? JSON.stringify(file) : undefined,
+          },
+        ],
+      });
+  
+      return {
+        board: {
+          columns: newColumns,
+        },
+      };
+    });
+  },  
 }));
