@@ -12,12 +12,13 @@ import { FormEvent } from "react";
 function Modal() {
 
   const imagePickerRef = useRef<HTMLInputElement>(null);
-  const [addTask, image, setImage, newTaskInput, setNewTaskInput] = useBoardStore((state) =>[
+  const [addTask, image, setImage, newTaskInput, setNewTaskInput, newTaskType] = useBoardStore((state) =>[
     state.addTask,
     state.image,
     state.setImage,
     state.newTaskInput,
     state.setNewTaskInput,
+    state.newTaskType,
   ]);
 
   const [isOpen, closeModal] = useModalStore((state) => [
@@ -30,6 +31,7 @@ function Modal() {
     if (!newTaskInput) return;
 
     // add task to board
+    addTask(newTaskInput, newTaskType, image);
 
     setImage(null);
     closeModal();
