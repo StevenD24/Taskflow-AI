@@ -12,6 +12,8 @@ Trello 2.0 GPT-4 takes task management to a whole new level by integrating the a
 - Drag-and-Drop Simplicity: Effortlessly organize your tasks with the intuitive drag-and-drop interface, allowing you to rearrange, prioritize, and update tasks with ease.
 - Beautiful and Intuitive User Interface: Immerse yourself in a visually appealing and user-friendly interface designed to enhance your task management experience.
 
+
+
 ## Technologies Utilized
 - **React:** The application is built using React, a popular JavaScript library for building interactive user interfaces. React's component-based architecture enables modular and reusable code, making development efficient and maintainable.
 - **Next.js:** A powerful React framework, is utilized for server-side rendering and static site generation. It provides excellent performance, SEO optimization, and developer-friendly features such as automatic code splitting and route pre-fetching.
@@ -26,6 +28,6 @@ Trello 2.0 GPT-4 is deployed on Vercel, a state-of-the-art platform known for it
    
 To provide a truly immersive and interactive experience with the Trello 2.0 GPT-4 app, I have taken the initiative to deploy the application on Vercel. This strategic deployment ensures that you can engage with the app in a live environment, enabling you to explore its extensive range of features firsthand.
    
-Experience the Trello 2.0 GPT-4 app in action by diving into the live application, accessible through the following link:   
+Experience the Trello 2.0 GPT-4 app in action here!   
 [Trello GPT Application](https://trello-gpt-app-stevend24.vercel.app/)
 
