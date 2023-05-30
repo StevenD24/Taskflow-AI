@@ -12,8 +12,6 @@ Trello 2.0 GPT-4 takes task management to a whole new level by integrating the a
 - **Drag-and-Drop Simplicity:** Effortlessly organize your tasks with the intuitive drag-and-drop interface, allowing you to rearrange, prioritize, and update tasks with ease.
 - **Beautiful and Intuitive User Interface:** Immerse yourself in a visually appealing and user-friendly interface designed to enhance your task management experience.
 
-![Screenshot 2023-05-29 at 9 47 24 PM](https://github.com/StevenD24/Trello-2.0-GPT-4/assets/105379503/35ad8f4b-465f-4854-9e40-b607a9012fa0)
-
 ## Technology Stack
 - **React:** The application is built using React, a popular JavaScript library for building interactive user interfaces. React's component-based architecture enables modular and reusable code, making development efficient and maintainable.
 - **Next.js:** A powerful React framework, is utilized for server-side rendering and static site generation. It provides excellent performance, SEO optimization, and developer-friendly features such as automatic code splitting and route pre-fetching.
@@ -22,6 +20,9 @@ Trello 2.0 GPT-4 takes task management to a whole new level by integrating the a
 - **Vercel:** The application is deployed on Vercel, a reliable and scalable platform for deploying web applications. Vercel ensures high availability, seamless updates, and provides built-in features such as serverless functions and edge caching to optimize performance.
 - **Appwrite Cloud:** Trello 2.0 GPT-4 utilizes the Appwrite Cloud backend service for database management and user authentication. Appwrite simplifies backend development with its powerful APIs and comprehensive features, ensuring secure data storage and user management.
 - **Headless UI:** A set of completely unstyled UI components, is integrated into the application to provide accessible and customizable building blocks. These components adhere to best accessibility practices, ensuring an inclusive user experience for all.
+
+## Dashboard
+![Screenshot 2023-05-29 at 9 47 24 PM](https://github.com/StevenD24/Trello-2.0-GPT-4/assets/105379503/35ad8f4b-465f-4854-9e40-b607a9012fa0)
 
 ## Deployment and Accessibility
 Trello 2.0 GPT-4 is deployed on Vercel, a state-of-the-art platform known for its speed, reliability, and simplicity. The application is accessible worldwide, offering a seamless experience for users across different devices and locations. Whether you're accessing it from your desktop, laptop, or mobile device, Trello 2.0 GPT-4 is ready to empower your task management journey.
