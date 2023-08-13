@@ -1,9 +1,9 @@
 # Taskflow AI
 
-Welcome to Trello 2.0 GPT-4, a revolutionary task management application that combines the best of Trello with the cutting-edge power of GPT-4 language model. Experience a new level of productivity and collaboration as you harness the capabilities of artificial intelligence. The application is live and deployed on Vercel, ready for you to explore and supercharge your task management process.
+Welcome to Taskflow AI, a revolutionary task management application that combines the best of Trello with the cutting-edge power of GPT-4 language model. Experience a new level of productivity and collaboration as you harness the capabilities of artificial intelligence. The application is live and deployed on Vercel, ready for you to explore and supercharge your task management process.
 
 ## Overview
-Trello 2.0 GPT-4 takes task management to a whole new level by integrating the advanced capabilities of the GPT-4 language model. Seamlessly plan, organize, and track your tasks in a visually intuitive and intelligent environment. The power of natural language processing and machine learning makes your task management experience more efficient, insightful, and delightful.
+Taskflow AI takes task management to a whole new level by integrating the advanced capabilities of the GPT-4 language model. Seamlessly plan, organize, and track your tasks in a visually intuitive and intelligent environment. The power of natural language processing and machine learning makes your task management experience more efficient, insightful, and delightful.
 
 ## Dashboard
 ![Screenshot 2023-05-29 at 9 47 24 PM](https://github.com/StevenD24/Trello-2.0-GPT-4/assets/105379503/35ad8f4b-465f-4854-9e40-b607a9012fa0)
@@ -25,7 +25,7 @@ Trello 2.0 GPT-4 takes task management to a whole new level by integrating the a
 - **Headless UI:** A set of completely unstyled UI components, is integrated into the application to provide accessible and customizable building blocks. These components adhere to best accessibility practices, ensuring an inclusive user experience for all.
 
 ## Deployment and Accessibility
-Trello 2.0 GPT-4 is deployed on Vercel, a state-of-the-art platform known for its speed, reliability, and simplicity. The application is accessible worldwide, offering a seamless experience for users across different devices and locations. Whether you're accessing it from your desktop, laptop, or mobile device, Trello 2.0 GPT-4 is ready to empower your task management journey.
+Taskflow AI is deployed on Vercel, a state-of-the-art platform known for its speed, reliability, and simplicity. The application is accessible worldwide, offering a seamless experience for users across different devices and locations. Whether you're accessing it from your desktop, laptop, or mobile device, this application is ready to empower your task management journey.
    
 To provide a truly immersive and interactive experience with the application, I have taken the initiative to deploy the application on Vercel. This strategic deployment ensures that you can engage with the app in a live environment, enabling you to explore its extensive range of features firsthand.
    
