@@ -1,4 +1,4 @@
-# Trello 2.0 GPT-4
+# Taskflow AI
 
 Welcome to Trello 2.0 GPT-4, a revolutionary task management application that combines the best of Trello with the cutting-edge power of GPT-4 language model. Experience a new level of productivity and collaboration as you harness the capabilities of artificial intelligence. The application is live and deployed on Vercel, ready for you to explore and supercharge your task management process.
 
